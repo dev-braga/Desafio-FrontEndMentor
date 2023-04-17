@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Idade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div id="form-date">
+    
+          <div id="form-inputs">
+            
+                    <div id="day-box">
+
+                        <label id="label-day">DAY</label></br>
+                        <input type="number" onchange="verificarCampos()" id="inputtext-day" oninput="limitValue()" placeholder="DD" /></br>
+                        <label id="text-error-day"></label>   
+            
+                    </div>
+            
+                    <div id="month-box">
+
+                        <label id="label-month">MONTH</label></br>
+                        <input type="number" onchange="verificarCampos()" id="inputtext-month" oninput="limitValue()" placeholder="MM" /></br>
+                        <label id="text-error-month"></label>   
+                    </div>
+            
+                    <div id="year-box">
+                        <label id="label-year">YEAR</label></br>
+                        <input type="number" onchange="verificarCampos()" id="inputtext-year" oninput="limitValue()" placeholder="YYYY" /></br>
+                        <label id="text-error-year"></label>     
+                    </div>
+
+            </div>
+    
+          <div id="separator">
+
+                <div id="hr-separator">
+                </div>
+                <div id="btnEnviar">
+                    <button type="button" class="button-enviar">↓</button>
+                </div>
+          </div>
+    
+          <div id="info-display">
+            
+            <div id="section-text-display">
+                <p id="text-result-years" class="color-text">--</p>
+                <p id="text-years">anos</p>
+            </div>
+            <div id="section-text-display">
+                <p id="text-result-months" class="color-text">--</p>
+                <p id="text-months">meses</p>
+            </div>
+            <div id="section-text-display">
+                <p id="text-result-days" class="color-text">--</p>
+                <p id="text-days">dias</p>
+            </div>
+
+          </div>
+    
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

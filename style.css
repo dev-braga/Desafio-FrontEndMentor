@@ -1,0 +1,215 @@
+* {
+  user-select: none;
+}
+body {
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .container {
+    background-color: #fff;
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 110px 15px;
+  }
+  #form-date {
+    width: 90%;
+  }
+  #form-inputs {
+    margin-left: 15px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+  }
+  #info-display{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 1rem;
+  }
+  #section-text-display{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  label {
+    font-size: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 1em;
+    font-weight: bold;
+    color: #757575;
+  }
+  /*  INPUT  ====================== */
+  input[type="number"] {
+    width: 70%;
+    height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    color: #1d1d1d;
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"]:selected{
+    border-color: #f52a2a;
+  }
+  input[type="number"]:not{
+    border-color: #d6d6d6;
+  }
+#separator{
+    margin-left: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.button-enviar{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(153, 64, 236);
+    color: #fff;
+    font-size: 27px;
+}
+.button-enviar:hover{
+    cursor: pointer;
+    background-color: rgb(132, 50, 209);
+}
+#btnEnviar{
+    width: 10%;
+    margin-right: 2rem;
+}
+#hr-separator{
+    height: 1px;
+    width: 84%;
+    background-color: #dddddd;
+}
+
+p{
+    margin-left: 15px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    font-size: 70px;
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 70px;
+  }
+
+.color-text{
+    color: rgb(153, 64, 236);
+}
+
+/* BREAKPOINTS ================================================== */
+@media (max-width: 1024px) {
+  .container{
+    width: 50%;
+    height: 50vh;
+  }
+}
+@media (max-width: 768px) {
+  .container{
+    width: 60%;
+    height: 50vh;
+  }
+}
+@media (max-width: 693px) {
+  .container{
+    width: 70%;
+    height: 50vh;
+  }
+  #hr-separator{
+    height: 1px;
+    width: 90%;
+    background-color: #dddddd;
+  }
+  input[type="number"]{
+    height: 50px;
+  }
+  #form-inputs {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.8rem;
+  }
+  #btnEnviar{
+    position: relative;
+    right: 54%;
+    margin-right: 0;
+    animation-name: myAnim;
+    animation-duration: 0.2s;
+  }
+  
+  @keyframes myAnim {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+}
+@media (max-width: 530px) {
+  .container{
+    width: 80%;
+    height: 50vh;
+  }
+}
+/* ANIMACAO NO TEXTO DE RESULTADO AO CLICAR NO BOTAO ====== */
+.color-text.animate{
+  animation-name: btnCLICOU;
+  animation-duration: .8s
+}
+@keyframes btnCLICOU {
+  0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
