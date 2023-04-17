@@ -221,7 +221,7 @@ p{
     font-size: 50px;
   }
 }
-/* ANIMACAO NO TEXTO DE RESULTADO AO CLICAR NO BOTAO ====== */
+/* ANIMACAO NO TEXTO DE RESULTADO AO CLICAR NO BOTAO ========== */
 .color-text.animate{
   animation-name: btnCLICOU;
   animation-duration: .8s
